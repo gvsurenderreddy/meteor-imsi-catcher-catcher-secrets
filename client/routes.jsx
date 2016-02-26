@@ -28,3 +28,13 @@ secretsRoute.route("/sim-readings", {
   },
 })
 SIM_PATH = FlowRouter.path('catcherSecretsSIMReadings')
+
+secretsRoute.route("/telephony-readings", {
+  name: "catcherSecretsTelephonyReadings",
+  action: function(params) {
+    ReactLayout.render(App, {
+      content: <TelephonyReadingsPage />
+    });
+  },
+})
+TELEPHONY_PATH = FlowRouter.path('catcherSecretsTelephonyReadings')

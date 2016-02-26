@@ -22,14 +22,15 @@ Package.onUse(function(api) {
   api.addFiles('client/app.jsx', 'client');
   api.addFiles('client/routes.jsx', 'client');
 
+  api.addFiles('client/pages/loading-page.jsx', 'client');
   api.addFiles('client/pages/secrets-page.jsx', 'client');
   api.addFiles('client/pages/s-i-m-readings-page.jsx', 'client');
-  api.addFiles('client/pages/loading-page.jsx', 'client');
+  api.addFiles('client/pages/telephony-readings-page.jsx', 'client');
 
   api.addFiles('client/layouts/loading-layout.jsx', 'client');
 
   api.addFiles('server/secret-key.js', 'server');
-  api.addFiles('server/s-i-m-readings-publications.js', 'server');
+  api.addFiles('server/readings-publications.js', 'server');
 });
 
 Package.onTest(function(api) {

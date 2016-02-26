@@ -5,11 +5,11 @@ Uses FlowRouter to add a route group to `/secrets` to browse data collected from
 meteor add marvin:meteor-imsi-catcher-catcher-secrets
 ````
 
-Add `SECRET_PATH` to your `settings.json`. It should be set to a random long string like:
+Add `CATCHER_SECRETS_KEY` to your `settings.json`. It should be set to a random long string like:
 
 ````
 {
-  CATCHER_SECRETS_KEY: "sldkfjlsdjflaksjfdsdfjeo2398rfdwedf9wewojlj"
+  CATCHER_SECRETS_KEY: "REALLY_LONG_STRING_OH_MY"
 }
 ````
 
