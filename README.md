@@ -1,4 +1,4 @@
-Uses FlowRouter to add a route group to `/secrets/{Meteor.settings.CATCHER_SECRETS_KEY}`.
+Uses FlowRouter to add a route group to `/secrets` to browse data collected from meteor-imsi-catcher-catcher.
 
 ## Usage
 ````
@@ -15,4 +15,4 @@ Add `SECRET_PATH` to your `settings.json`. It should be set to a random long str
 
 Start your server with `meteor --settings settings.json`.
 
-Open http://HOST/secrets/CATCHER_SECRETS_KEY and explore your data.
+Open http://HOST/secrets?secret=CATCHER_SECRETS_KEY and explore the data.
