@@ -13,7 +13,8 @@ Package.onUse(function(api) {
     'kadira:flow-router@2.10.1',
     'kadira:react-layout@1.5.3',
     'twbs:bootstrap@4.0.0-alpha.2',
-    'fortawesome:fontawesome@4.5.0'
+    'fortawesome:fontawesome@4.5.0',
+    'momentjs:moment@2.11.2'
   ])
   api.use(['marvin:imsi-catcher-catcher@0.0.1'])
 

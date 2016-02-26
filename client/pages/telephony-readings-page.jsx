@@ -5,7 +5,7 @@ TelephonyReadingsPage = React.createClass({
 
     var data = {
       ready: false,
-      readings: Catcher.TelephonyReadings.find().fetch()
+      readings: Catcher.TelephonyReadings.find({}, {sort: {"commonReading.createdAt": -1}}).fetch()
     };
 
     var handles = [
@@ -22,7 +22,7 @@ TelephonyReadingsPage = React.createClass({
 
   reading(reading) {
     return (
-      <tr>
+      <tr key={reading._id}>
         <th scope="row">{reading.commonReading.deviceId}</th>
         <td>{reading.commonReading.readingType}</td>
         <td>{reading.cid}</td>
@@ -33,7 +33,7 @@ TelephonyReadingsPage = React.createClass({
         <td>{reading.signalStrengthDBM}</td>
         <td>{reading.latitude}</td>
         <td>{reading.longitude}</td>
-        <td>{reading.commonReading.createdAt}</td>
+        <td>{moment(reading.commonReading.createdAt).format('MMMM do YYYY, h:mm:ss a')}</td>
       </tr>
     )
   },
