@@ -9,7 +9,6 @@ var secretsRoute = FlowRouter.group({
   }]
 });
 
-
 secretsRoute.route("/", {
   name: "catcherSecrets",
   action: function(params) {
