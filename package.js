@@ -19,19 +19,29 @@ Package.onUse(function(api) {
   api.use(['marvin:imsi-catcher-catcher@0.0.1'])
 
   api.addFiles('client/constants.js', 'client');
+  api.addFiles('client/lib/helpers.js', 'client');
 
   api.addFiles('client/app.jsx', 'client');
   api.addFiles('client/routes.jsx', 'client');
 
+  // components
+  api.addFiles('client/components/links.jsx', 'client');
+
+  // pages
+  api.addFiles('client/pages/basestations-page.jsx', 'client');
   api.addFiles('client/pages/loading-page.jsx', 'client');
+  api.addFiles('client/pages/neighbor-readings-page.jsx', 'client');
   api.addFiles('client/pages/secrets-page.jsx', 'client');
   api.addFiles('client/pages/s-i-m-readings-page.jsx', 'client');
   api.addFiles('client/pages/telephony-readings-page.jsx', 'client');
 
+  // layouts
   api.addFiles('client/layouts/loading-layout.jsx', 'client');
+  api.addFiles('client/layouts/table-layout.jsx', 'client');
+
 
   api.addFiles('server/secret-key.js', 'server');
-  api.addFiles('server/readings-publications.js', 'server');
+  api.addFiles('server/publications.js', 'server');
 });
 
 Package.onTest(function(api) {

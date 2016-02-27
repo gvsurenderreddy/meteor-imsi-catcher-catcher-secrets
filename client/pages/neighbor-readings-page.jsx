@@ -39,7 +39,7 @@ NeighborReadingsPage = React.createClass({
     return (
       <LoadingLayout ready={this.data.ready}>
         <TableLayout>
-          <h3>Telephony Readings</h3>
+          <h3>Neighbor Readings</h3>
           <table className="table">
             <thead>
               <tr>

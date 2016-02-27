@@ -9,7 +9,7 @@ SIMReadingsPage = React.createClass({
     };
 
     var handles = [
-      Meteor.subscribe('cathcer/secrets/sim-readings', Session.get(SESSION_SECRET)),
+      Meteor.subscribe('catcher/secrets/sim-readings', Session.get(SESSION_SECRET)),
     ];
 
     var handlesReady = _.every(handles, handle => {return handle.ready();})

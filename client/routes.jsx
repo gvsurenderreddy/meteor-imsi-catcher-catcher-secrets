@@ -48,3 +48,13 @@ secretsRoute.route("/neighbor-readings", {
   },
 })
 NEIGHBOR_PATH = FlowRouter.path('catcherSecretsNeighborReadings')
+
+secretsRoute.route("/basestations", {
+  name: "catcherSecretsBasestations",
+  action: function(params) {
+    ReactLayout.render(App, {
+      content: <BasestationsPage />
+    });
+  },
+})
+BASESTATIONS_PATH = FlowRouter.path('catcherSecretsBasestations')

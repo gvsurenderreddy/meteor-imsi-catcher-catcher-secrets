@@ -9,7 +9,7 @@ TelephonyReadingsPage = React.createClass({
     };
 
     var handles = [
-      Meteor.subscribe('cathcer/secrets/telephony-readings', Session.get(SESSION_SECRET)),
+      Meteor.subscribe('catcher/secrets/telephony-readings', Session.get(SESSION_SECRET)),
     ];
 
     var handlesReady = _.every(handles, handle => {return handle.ready();})
