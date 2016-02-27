@@ -38,3 +38,13 @@ secretsRoute.route("/telephony-readings", {
   },
 })
 TELEPHONY_PATH = FlowRouter.path('catcherSecretsTelephonyReadings')
+
+secretsRoute.route("/neighbor-readings", {
+  name: "catcherSecretsNeighborReadings",
+  action: function(params) {
+    ReactLayout.render(App, {
+      content: <NeighborReadingsPage />
+    });
+  },
+})
+NEIGHBOR_PATH = FlowRouter.path('catcherSecretsNeighborReadings')

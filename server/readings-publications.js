@@ -1,20 +1,19 @@
-var options = {sort: {"commonReading.createdAt": -1}, limit: 100}
-Meteor.publish("cathcer/secrets/sim-readings", function(secretKey) {
-  check(secretKey, String)
+var methods = [
+  {name: "cathcer/secrets/sim-readings", kollection: Catcher.SIMReadings},
+  {name: "cathcer/secrets/telephony-readings", kollection: Catcher.TelephonyReadings},
+  {name: "cathcer/secrets/neighbor-readings", kollection: Catcher.NeighborReadings},
+]
 
-  if(correctSecret(secretKey)) {
-    return Catcher.SIMReadings.find({}, options)
-  } else {
-    this.ready();
-  }
-});
+_.each(methods, method => {
+  Meteor.publish(method.name, secretKey => {
+    check(secretKey, String)
 
-Meteor.publish("cathcer/secrets/telephony-readings", function(secretKey) {
-  check(secretKey, String)
+    if(correctSecret(secretKey)) {
+      var options = {sort: {"commonReading.createdAt": -1}, limit: 100}
 
-  if(correctSecret(secretKey)) {
-    return Catcher.TelephonyReadings.find({}, options)
-  } else {
-    this.ready();
-  }
-});
+      return method.kollection.find({}, options)
+    } else {
+      this.ready();
+    }
+  })
+})

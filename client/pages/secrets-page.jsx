@@ -6,6 +6,7 @@ SecretsPage = React.createClass({
         <ul>
           <li><a href={SIM_PATH}>SIM Readings</a></li>
           <li><a href={TELEPHONY_PATH}>Telephony Readings</a></li>
+          <li><a href={NEIGHBOR_PATH}>Neighbor Readings</a></li>
         </ul>
       </div>
     )
